@@ -1,9 +1,13 @@
 import React from 'react'
+import { MainPage } from './MainPage'
+import { Header } from './shared/Header'
+
 
 export const HomePage = () => {
     return (
-        <div>
-            <h1>HomePage</h1>
-        </div>
+        <>
+            <Header />
+            <MainPage />
+        </>
     )
 }

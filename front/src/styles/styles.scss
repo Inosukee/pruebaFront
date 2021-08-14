@@ -1,4 +1,8 @@
-html,
-body {
-    background-color: red;
-}
+@import "./base/settings";
+@import "./base/base";
+
+//Componentes
+@import "./components/header";
+@import "./components/products";
+@import "./components/hystory";
+@import "./components/main";

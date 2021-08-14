@@ -1,0 +1,16 @@
+.header__header {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    justify-content: center;
+    background: #FFF15B;
+}
+
+.header__button {
+    background: #EBEBEB;
+    border: 1px solid #EBEBEB;
+}
+
+.header__button:hover {
+    background: #EBEBEB;
+}
