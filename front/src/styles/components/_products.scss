@@ -17,8 +17,10 @@
 }
 
 .product__container__img {
+    min-width: 220px;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
 }
 
@@ -28,14 +30,21 @@
     border-radius: 5px;
 }
 
-.product__container__info{
+.product__container__info {
     padding: 20px;
 }
 
-.product__container__price{
+.product__container__price {
     font-size: 1.5rem;
 }
-.product__container__title{
+
+.product__container__title {
     margin-top: 3%;
     max-width: 70%;
+}
+
+/* Using SCSS variables to store breakpoints */
+
+@media (max-width: $breakpoint-tablet) {
+  
 }

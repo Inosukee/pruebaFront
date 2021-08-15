@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ProductsPageItem = ({ img, price, productName }) => {
+export const ProductsPageItem = ({ img, price, title, last = false }) => {
   return (
     <>
       <div className='product__grid'>
@@ -9,14 +9,24 @@ export const ProductsPageItem = ({ img, price, productName }) => {
         </div>
         <div className='product__container__info'>
           <div className='product__container__price'>
-            {price}
+            $ {price}
           </div>
           <div className='product__container__title'>
-            {productName}
+            {title}
           </div>
         </div>
       </div>
-      <hr />
+      {
+        !last ?
+          (
+            <hr />
+          )
+          :
+          (
+            <br />
+          )
+      }
+
     </>
   )
 }
