@@ -8,7 +8,7 @@ export const Header = () => {
             <div className='pointer'>
                 <img src={logo} alt="logo" />
             </div>
-            <div className="input-group w-50 mx-3">
+            <div className="input-group header__input">
                 <input type="text" className="form-control" placeholder="Nunca dejes de buscar" />
                 <button className="btn btn-outline-secondary header__button" type="button"><img src={search} alt="search" /></button>
             </div>

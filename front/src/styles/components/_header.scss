@@ -3,14 +3,20 @@
     align-items: center;
     min-height: 70px;
     justify-content: center;
-    background: #FFF15B;
+    background-color: $yellow-mercadolibre;
 }
 
+// set button default
 .header__button {
-    background: #EBEBEB;
-    border: 1px solid #EBEBEB;
+    background: $white-mercadolibre;
+    border: 1px solid $white-mercadolibre;
 }
+
 
 .header__button:hover {
-    background: #EBEBEB;
+    background: $white-mercadolibre;
+}
+.header__input{
+    max-width: 58%;
+    margin-left: 1%;
 }

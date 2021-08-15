@@ -1,11 +1,11 @@
 import React from 'react'
-import { History } from './History'
-import { ProductsPage } from './ProductsPage'
+import { History } from '../history/History'
+import { ProductsPage } from '../products/ProductsPage'
 
 
 export const MainPage = () => {
     return (
-        <div className='Main__Main'>
+        <div className='main__main'>
             <History />
             <ProductsPage />
         </div>
