@@ -5,6 +5,7 @@ import { ProductsPage } from '../products/ProductsPage'
 
 
 export const MainPage = ({ filter }) => {
+
     const { data: products, loading } = useFetchProduct(filter);
     return (
         <>

@@ -1,19 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
+import queryString from 'query-string';
 import logo from '../../assets/img/Logo_ML.png'
-import search from '../../assets/img/ic_Search.png'
+import searchIco from '../../assets/img/ic_Search.png'
+import { useForm } from '../../hooks/useForm';
+import { useLocation } from 'react-router-dom';
 
-export const Header = ({ setFilter }) => {
+export const Header = ({ setFilter, history }) => {
 
-    const [inputValue, setInputValue] = useState('');
+    const location = useLocation();
+    const { search = '' } = queryString.parse(location.search);
 
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value);
-    }
+    const [formValues, handleInputChange] = useForm({
+        searchText: search
+    });
+
+    const { searchText } = formValues;
+
+    useEffect(() => setFilter(search), [setFilter, search])
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (inputValue.trim().length > 0) {
-            setFilter(() => [inputValue]);
+        if (searchText.trim().length > 0) {
+            history.push(`items?search=${searchText}`);
         }
 
     }
@@ -22,11 +31,11 @@ export const Header = ({ setFilter }) => {
             <div className='pointer'>
                 <img src={logo} alt="logo" />
             </div>
-            <div className="input-group header__input">
-                <input type="text" className="form-control" placeholder="Nunca dejes de buscar" value={inputValue}
-                    onChange={handleInputChange} />
-                <button className="btn btn-outline-secondary header__button" type="button" onClick={handleSubmit}><img src={search} alt="search" /></button>
-            </div>
+            <form onSubmit={handleSubmit} className="input-group header__input">
+                <input type="text" className="form-control" placeholder="Nunca dejes de buscar" value={searchText}
+                    onChange={handleInputChange} name="searchText" />
+                <button className="btn btn-outline-secondary header__button" type="submit"><img src={searchIco} alt="search" /></button>
+            </form>
         </header>
     )
 }

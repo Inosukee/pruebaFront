@@ -1,10 +1,11 @@
 import React from 'react'
 import CurrencyFormat from 'react-currency-format';
+import { Link } from 'react-router-dom';
 
-export const ProductsPageItem = ({ img, price, title, last = false }) => {
+export const ProductsPageItem = ({ id, img, price, title, last = false }) => {
   return (
     <>
-      <div className='product__grid'>
+      <Link to={`./items/${id}`} className='product__grid' >
         <div className='product__container__img'>
           <img className='product__img' src={img} alt="foto" />
         </div>
@@ -16,7 +17,7 @@ export const ProductsPageItem = ({ img, price, title, last = false }) => {
             {title}
           </div>
         </div>
-      </div>
+      </Link>
       {
         !last ?
           (
