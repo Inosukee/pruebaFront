@@ -1,4 +1,5 @@
 import React from 'react'
+import CurrencyFormat from 'react-currency-format';
 
 export const ProductsPageItem = ({ img, price, title, last = false }) => {
   return (
@@ -9,7 +10,7 @@ export const ProductsPageItem = ({ img, price, title, last = false }) => {
         </div>
         <div className='product__container__info'>
           <div className='product__container__price'>
-            $ {price}
+            <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$ '} />
           </div>
           <div className='product__container__title'>
             {title}
