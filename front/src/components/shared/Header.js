@@ -3,10 +3,9 @@ import queryString from 'query-string';
 import logo from '../../assets/img/Logo_ML.png'
 import searchIco from '../../assets/img/ic_Search.png'
 import { useForm } from '../../hooks/useForm';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Header = ({ setFilter, history }) => {
-
     const location = useLocation();
     const { search = '' } = queryString.parse(location.search);
 
@@ -18,19 +17,22 @@ export const Header = ({ setFilter, history }) => {
 
     useEffect(() => setFilter(search), [setFilter, search])
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         if (searchText.trim().length > 0) {
-            history.push(`items?search=${searchText}`);
+            if (location.pathname.includes('/items/')) {
+                history.push(`/items?search=${searchText}`);
+            } else {
+                history.push(`items?search=${searchText}`);
+            }
         }
 
     }
     return (
         <header role='banner' className='header__header'>
-            <div className='pointer'>
+            <Link to={'/'} className='pointer'>
                 <img src={logo} alt="logo" />
-            </div>
+            </Link>
             <form onSubmit={handleSubmit} className="input-group header__input">
                 <input type="text" className="form-control" placeholder="Nunca dejes de buscar" value={searchText}
                     onChange={handleInputChange} name="searchText" />

@@ -12,12 +12,10 @@ export const AppRouter = () => {
 
   return (
     <Router>
-      <div>
-        <Switch>
-          <PublicRoute path="/" component={HomeRouter} />
-          <Redirect to="/" />
-        </Switch>
-      </div>
+      <Switch>
+        <PublicRoute path="/" component={HomeRouter} />
+        <Redirect to="/" />
+      </Switch>
     </Router>
   );
 }

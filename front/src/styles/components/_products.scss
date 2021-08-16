@@ -49,6 +49,57 @@
     max-width: 70%;
 }
 
+
+.product__detail {
+    display: flex;
+    min-height: 520px;
+    justify-content: space-between;
+}
+
+.product__detail__img {
+    max-height: 900px;
+    border-radius: 5px;
+}
+
+.product__desc {
+    max-width: 70%;
+    padding: 15px;
+}
+
+.product__desc h2 {
+    margin-bottom: 3%;
+}
+
+.product__detail__info {
+    max-width: 20%;
+    margin: 40px 65px 40px 0px;
+}
+
+.product__detail__info button {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.product__detail__info h4 {
+    font-weight: bold;
+}
+
+.product__detail__info p {
+    margin: 0;
+    font-size: small;
+    padding: 5px;
+}
+
+.product__detail__price {
+    font-size: 1.9rem;
+    margin-bottom: 2%;
+}
+
 /* Using SCSS variables to store breakpoints */
 
-@media (max-width: $breakpoint-tablet) {}
+@media (max-width: $breakpoint-tablet) {
+    .product__detail__img {
+        max-height: 250px;
+        border-radius: 5px;
+    }
+}

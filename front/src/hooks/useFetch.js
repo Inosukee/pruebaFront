@@ -8,6 +8,7 @@ export const useFetchProduct = (filter) => {
     data: [],
     loading: true
   });
+
   useEffect(() => {
     getProduct(filter)
       .then(product => {
@@ -20,3 +21,4 @@ export const useFetchProduct = (filter) => {
 
   return state;
 }
+

@@ -9,10 +9,29 @@ export const getProduct = async (filter) => {
         id: product.id,
         title: product.title,
         img: product.thumbnail,
-        price:product.price
+        price: product.price
       }
     })
     return products;
   }
 
 }
+
+
+export const getProductByid = async (id) => {
+  const url =
+    `https://api.mercadolibre.com/items/${id}`;
+  const response = await fetch(url);
+  const productResponse = await response.json();
+  return productResponse;
+}
+
+
+export const getProductDesc = async (id) => {
+  const url =
+    `https://api.mercadolibre.com/items/${id}/description`;
+  const response = await fetch(url);
+  const productResponse = await response.json();
+  return productResponse;
+}
+
