@@ -95,6 +95,19 @@
     margin-bottom: 2%;
 }
 
+.product__image__shipping {
+    margin-left: 2%;
+}
+
+.product__container__author {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 5%;
+    padding-top: 5%;
+    color: grey;
+}
+
 /* Using SCSS variables to store breakpoints */
 
 @media (max-width: $breakpoint-tablet) {
@@ -121,5 +134,9 @@
     .product__detail__img {
         max-height: 250px;
         border-radius: 5px;
+    }
+
+    .product__container__author {
+        display: none;
     }
 }
