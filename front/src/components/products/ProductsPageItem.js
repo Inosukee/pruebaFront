@@ -5,7 +5,6 @@ import shippingImg from '../../assets/img/ic_shipping.png';
 
 export const ProductsPageItem = ({ id, thumbnail, price, title, shipping, seller, last = false }) => {
   const { eshop } = seller;
-  console.log(eshop);
   return (
     <>
       <Link to={`./items/${id}`} className='product__grid' >
