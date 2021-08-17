@@ -11,10 +11,10 @@ export const MainPage = ({ filter }) => {
         <>
             {loading && <p>Cargando...</p>}
             {
-                products.length > 0 &&
+                products &&
                 <div className='main__main animate__animated animate__fadeIn'>
-                    <History />
-                    <ProductsPage productos={products} />
+                    <History categories={products.categories} />
+                    <ProductsPage productos={products.items} />
                 </div>
             }
         </>

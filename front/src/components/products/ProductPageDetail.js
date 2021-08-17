@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { History } from '../history/History'
 import { useParams } from 'react-router-dom';
 import { getProductByid } from '../../helpers/getProduct';
 import { ProductPageDescription } from './ProductPageDescription';
@@ -15,16 +14,19 @@ export const ProductPageDetail = () => {
       setproduct__detail(res)
     })
   }, [id])
+
   const { pictures } = product__detail;
 
   return (
     <>
       {(product__detail && pictures) &&
         <div className='main__main animate__animated animate__fadeIn'>
-          <History />
           <div className="product__main">
             <div className="product__detail">
-              <img className="product__detail__img" src={pictures[0].url} alt="" />
+              <div className='product__detail__img'>
+                <img className="product__detail__img" src={pictures[0].url}
+                  alt="" />
+              </div>
               <div className="product__detail__info">
                 <p>{product__detail.sold_quantity} vendidos</p>
                 <h4>

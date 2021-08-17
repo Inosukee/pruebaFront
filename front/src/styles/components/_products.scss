@@ -98,6 +98,26 @@
 /* Using SCSS variables to store breakpoints */
 
 @media (max-width: $breakpoint-tablet) {
+    .product__container__info {
+        padding: 0;
+    }
+
+    .product__detail {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    .product__detail__info {
+        max-width: 100%;
+        margin: 15px;
+    }
+
+    .product__detail__img {
+        display: flex;
+        justify-content: center;
+    }
+
     .product__detail__img {
         max-height: 250px;
         border-radius: 5px;

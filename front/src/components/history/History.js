@@ -1,32 +1,18 @@
 import React from 'react'
 import { HistoryItem } from './HistoryItem'
 
-export const History = () => {
-
-    const historyObject = [
-        {
-            idHistory: 1,
-            nameHistory: 'Categoria'
-        },
-        {
-            idHistory: 2,
-            nameHistory: 'Busqueda'
-        },
-        {
-            idHistory: 3,
-            nameHistory: 'Producto'
-        }
-    ]
+export const History = ({ categories }) => {
     return (
         <div className='history__content'>
             <ul className='history__history'>
                 {
-                    historyObject.map((history, i, { length }) => {
+                    categories &&
+                    categories.map((history, i, { length }) => {
                         if (i < length - 1) {
-                            return (<HistoryItem key={history.idHistory}
+                            return (<HistoryItem key={history.id}
                                 {...history} />)
                         } else {
-                            return (<HistoryItem last={true} key={history.idHistory}
+                            return (<HistoryItem last={true} key={history.id}
                                 {...history} />)
                         }
                     })

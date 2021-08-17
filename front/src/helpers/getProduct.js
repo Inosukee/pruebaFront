@@ -2,17 +2,26 @@ export const getProduct = async (filter) => {
   const url =
     `https://api.mercadolibre.com/sites/MLA/search?q=${encodeURI(filter)}&limit=4`;
   const response = await fetch(url);
-  const { results } = await response.json();
-  if (results) {
-    const products = results.map(product => {
-      return {
-        id: product.id,
-        title: product.title,
-        img: product.thumbnail,
-        price: product.price
-      }
-    })
-    return products;
+  const resultsApi = await response.json();
+  if (resultsApi.results.length > 0) {
+    let addfilter = {
+      id: 'filter1',
+      name: filter.charAt(0).toUpperCase() + filter.slice(1)
+    }
+    let filters = [];
+    const { results } = resultsApi;
+    if (resultsApi.filters.length > 0) {
+      const [{ values }] = resultsApi.filters;
+      filters = [addfilter, ...values];
+    }
+    else {
+      filters = [addfilter, ...filters]
+    }
+    const productResult = {
+      categories: filters,
+      items: results
+    }
+    return productResult;
   }
 
 }
