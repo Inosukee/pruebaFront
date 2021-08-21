@@ -1,5 +1,6 @@
 import React from 'react'
 import { ProductsPageItem } from './ProductsPageItem'
+import PropTypes from 'prop-types'
 
 export const ProductsPage = ({ productos }) => {
     return (
@@ -25,4 +26,8 @@ export const ProductsPage = ({ productos }) => {
             </div>
         </div>
     )
+}
+
+ProductsPage.propTypes = {
+    productos: PropTypes.array
 }

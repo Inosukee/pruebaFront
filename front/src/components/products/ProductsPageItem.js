@@ -2,6 +2,7 @@ import React from 'react'
 import CurrencyFormat from 'react-currency-format';
 import { Link } from 'react-router-dom';
 import shippingImg from '../../assets/img/ic_shipping.png';
+import PropTypes from 'prop-types'
 
 export const ProductsPageItem = ({ id, thumbnail, price, title, shipping, seller, last = false }) => {
   const { eshop } = seller;
@@ -43,4 +44,13 @@ export const ProductsPageItem = ({ id, thumbnail, price, title, shipping, seller
 
     </>
   )
+}
+
+
+ProductsPageItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  shipping: PropTypes.object,
+  seller: PropTypes.object,
 }

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <HistoryItem /> debe mostrar el componente correctamente 1`] = `
+<div
+  className="product__main"
+>
+  <div
+    className="product__wrapper"
+  >
+    <ProductsPageItem
+      id="1"
+      key="1"
+      price={5000}
+      shipping={
+        Object {
+          "free_shipping": false,
+        }
+      }
+      thumbnail="http://http2.mlstatic.com/D_747115-MLA45255697432_032021-O.jpg"
+      title="prueba 1"
+    />
+    <ProductsPageItem
+      id="2"
+      key="2"
+      price={8000}
+      shipping={
+        Object {
+          "free_shipping": true,
+        }
+      }
+      thumbnail="http://http2.mlstatic.com/D_747115-MLA45255697432_032021-O.jpg"
+      title="prueba 2"
+    />
+    <ProductsPageItem
+      id="3"
+      key="3"
+      last={true}
+      price={3000}
+      shipping={
+        Object {
+          "free_shipping": false,
+        }
+      }
+      thumbnail="http://http2.mlstatic.com/D_747115-MLA45255697432_032021-O.jpg"
+      title="prueba 3"
+    />
+  </div>
+</div>
+`;

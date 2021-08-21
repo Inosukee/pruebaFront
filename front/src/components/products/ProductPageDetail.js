@@ -34,7 +34,7 @@ export const ProductPageDetail = () => {
                 </h4>
                 <CurrencyFormat className="product__detail__price" value={product__detail.base_price} displayType={'text'} thousandSeparator={true} prefix={'$ '} />
                 <div>
-                  <button className="btn btn-primary">Comprar</button>
+                  <button className="product__btn">Comprar</button>
                 </div>
               </div>
             </div>

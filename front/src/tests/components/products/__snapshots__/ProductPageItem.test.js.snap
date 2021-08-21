@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <HistoryItem /> debe mostrar el componente correctamente 1`] = `
+<Fragment>
+  <Link
+    className="product__grid"
+    to="./items/1"
+  >
+    <div
+      className="product__container__img"
+    >
+      <img
+        alt="foto"
+        className="product__img"
+        src="http://http2.mlstatic.com/D_747115-MLA45255697432_032021-O.jpg"
+      />
+    </div>
+    <div
+      className="product__container__info"
+    >
+      <div
+        className="product__container__price"
+      >
+        <CurrencyFormat
+          allowNegative={true}
+          decimalSeparator="."
+          displayType="text"
+          fixedDecimalScale={false}
+          isAllowed={[Function]}
+          isNumericString={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseUp={[Function]}
+          onValueChange={[Function]}
+          prefix="$ "
+          suffix=""
+          thousandSeparator={true}
+          thousandSpacing="3"
+          type="text"
+          value={5000}
+        />
+      </div>
+      <div
+        className="product__container__title"
+      >
+        prueba 1
+      </div>
+    </div>
+    <div
+      className="product__container__author"
+    />
+  </Link>
+  <hr />
+</Fragment>
+`;

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getProductDesc } from '../../helpers/getProduct'
 
+import PropTypes from 'prop-types'
+
 export const ProductPageDescription = ({ id }) => {
 
   const [productDesc, setProductDesc] = useState({})
@@ -18,8 +20,13 @@ export const ProductPageDescription = ({ id }) => {
         <h2>
           Descripción del producto
         </h2>
-        <p>{productDesc.plain_text}</p>
+        <p className="product__desc__text">{productDesc.plain_text}</p>
       </div>
     </>
   )
+}
+
+
+ProductPageDescription.propTypes = {
+  id: PropTypes.string.isRequired
 }

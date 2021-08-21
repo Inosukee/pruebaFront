@@ -31,10 +31,10 @@ export const Header = ({ setFilter, history }) => {
     return (
         <header role='banner' className='header__header'>
             <Link to={'/'} className='pointer'>
-                <img src={logo} alt="logo" />
+                <img className='header__img' src={logo} alt="logo" />
             </Link>
-            <form onSubmit={handleSubmit} className="input-group header__input">
-                <input type="text" className="form-control" placeholder="Nunca dejes de buscar" value={searchText}
+            <form onSubmit={handleSubmit} className="header__group">
+                <input type="text" className="header__input" placeholder="Nunca dejes de buscar" value={searchText}
                     onChange={handleInputChange} name="searchText" />
                 <button className="btn btn-outline-secondary header__button" type="submit"><img src={searchIco} alt="search" /></button>
             </form>

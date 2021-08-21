@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <MainPage /> debe mostrar el componente correctamente 1`] = `
+<Fragment>
+  <p>
+    Cargando...
+  </p>
+  <div
+    className="main__main animate__animated animate__fadeIn"
+  >
+    <History />
+    <ProductsPage />
+  </div>
+</Fragment>
+`;

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const HistoryItem = ({ name, last = false }) => {
   return (
@@ -20,4 +21,11 @@ export const HistoryItem = ({ name, last = false }) => {
         </li>
       )
   )
+}
+
+
+
+HistoryItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  last: PropTypes.bool
 }

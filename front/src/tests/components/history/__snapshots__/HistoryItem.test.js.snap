@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <HistoryItem /> debe mostrar el componente correctamente 1`] = `
+<li>
+  <a
+    href="!#"
+  >
+    Test
+  </a>
+  <div
+    className="history__svg"
+  >
+    <svg
+      height="8"
+      width="6"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 0l4 4-4 4"
+        fill="none"
+        stroke="#666"
+      />
+    </svg>
+  </div>
+</li>
+`;

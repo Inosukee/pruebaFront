@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en <History/> debe mostrar el componente correctamente 1`] = `
+exports[`Pruebas en <History /> debe mostrar el componente correctamente 1`] = `
 <div
   className="history__content"
 >
@@ -8,20 +8,20 @@ exports[`Pruebas en <History/> debe mostrar el componente correctamente 1`] = `
     className="history__history"
   >
     <HistoryItem
-      idHistory={1}
+      id={1}
       key="1"
-      nameHistory="Categoria"
+      name="prueba 1"
     />
     <HistoryItem
-      idHistory={2}
+      id={2}
       key="2"
-      nameHistory="Busqueda"
+      name="prueba 2"
     />
     <HistoryItem
-      idHistory={3}
+      id={3}
       key="3"
       last={true}
-      nameHistory="Producto"
+      name="prueba 3"
     />
   </ul>
 </div>

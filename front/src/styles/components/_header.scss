@@ -10,13 +10,38 @@
 .header__button {
     background: $white-mercadolibre;
     border: 1px solid $white-mercadolibre;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
 }
 
 
 .header__button:hover {
     background: $white-mercadolibre;
 }
-.header__input{
+
+.header__group {
     max-width: 58%;
     margin-left: 1%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.header__input {
+    padding: .375rem .75rem;
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    min-height: 22px;
+    line-height: inherit;
+}
+
+.header__img {
+    vertical-align: middle;
 }
