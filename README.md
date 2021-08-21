@@ -9,7 +9,7 @@ Este proyecto esta hecho en react version 17.0.2
 dirigirse a la carpeta del directorio front `cd front/`
 
 ### `Instalar dependencias`
-una vez dentro de la carpeta instalar las dependencias necesarias para su correcto funcionamiento
+una vez dentro de la carpeta instalar las dependencias necesarias para su correcto funcionamiento `npm i`
 
 ### `Correr el proyecto`
 Para ejecutar el proyecto corre en la terminal (situado en el direcotrio del front) el script `npm start`
