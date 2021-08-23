@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { getProduct } from "../helpers/getProduct";
+import { getProduct, getProductByid, getProductDesc } from "../helpers/getProduct";
 
 
 export const useFetchProduct = (filter) => {
 
-  const [state, setstate] = useState({
+  const [products, setProducts] = useState({
     data: [],
     loading: true
   });
@@ -12,13 +12,54 @@ export const useFetchProduct = (filter) => {
   useEffect(() => {
     getProduct(filter)
       .then(product => {
-        setstate({
+        setProducts({
           data: product,
           loading: false
         })
       })
   }, [filter]);
 
-  return state;
+  return products;
 }
 
+
+export const useFetchProductById = (id) => {
+
+  const [product, setProduct] = useState({
+    data: [],
+    loading: true
+  });
+
+  useEffect(() => {
+    getProductByid(id)
+      .then(product => {
+        setProduct({
+          data: product,
+          loading: false
+        })
+      })
+  }, [id]);
+
+  return product;
+}
+
+
+export const useFetchProductDesc = (id) => {
+
+  const [productDesc, setProductDesc] = useState({
+    data: [],
+    loading: true
+  });
+
+  useEffect(() => {
+    getProductDesc(id)
+      .then(product => {
+        setProductDesc({
+          data: product,
+          loading: false
+        })
+      })
+  }, [id]);
+
+  return productDesc;
+}

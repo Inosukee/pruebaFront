@@ -1,24 +1,19 @@
-import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { getProductByid } from '../../helpers/getProduct';
 import { ProductPageDescription } from './ProductPageDescription';
 import CurrencyFormat from 'react-currency-format';
+import { useFetchProductById } from '../../hooks/useFetch';
 
 export const ProductPageDetail = () => {
-  const [product__detail, setproduct__detail] = useState({})
 
   let { id } = useParams();
 
-  useEffect(() => {
-    getProductByid(id).then((res) => {
-      setproduct__detail(res)
-    })
-  }, [id])
+  const { data: product__detail, loading } = useFetchProductById(id);
 
   const { pictures } = product__detail;
 
   return (
     <>
+      {loading && <p>Cargando...</p>}
       {(product__detail && pictures) &&
         <div className='main__main animate__animated animate__fadeIn'>
           <div className="product__main">

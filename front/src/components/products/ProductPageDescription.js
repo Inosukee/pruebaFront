@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { getProductDesc } from '../../helpers/getProduct'
-
 import PropTypes from 'prop-types'
+import { useFetchProductDesc } from '../../hooks/useFetch'
 
 export const ProductPageDescription = ({ id }) => {
 
-  const [productDesc, setProductDesc] = useState({})
 
 
-  useEffect(() => {
-    getProductDesc(id).then((res) => {
-      setProductDesc(res)
-    })
-  }, [id])
+  const { data: productDesc, loading } = useFetchProductDesc(id);
 
   return (
     <>
+      {loading && <p>Cargando...</p>}
       <div className="product__desc">
         <h2>
           Descripción del producto

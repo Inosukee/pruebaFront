@@ -1,6 +1,6 @@
 # DOCUMENTACION
 
-# Version React
+## Version React
 
 Este proyecto esta hecho en react version 17.0.2
 
