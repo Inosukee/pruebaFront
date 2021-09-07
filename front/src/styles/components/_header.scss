@@ -42,6 +42,10 @@
     line-height: inherit;
 }
 
+.header__input:focus {
+    outline: none;
+}
+
 .header__img {
     vertical-align: middle;
 }
